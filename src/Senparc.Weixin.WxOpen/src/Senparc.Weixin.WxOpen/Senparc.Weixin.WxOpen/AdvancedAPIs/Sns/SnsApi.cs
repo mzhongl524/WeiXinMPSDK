@@ -22,7 +22,7 @@ Detail: https://github.com/JeffreySu/WeiXinMPSDK/blob/master/license.md
     Copyright (C) 2019 Senparc
     
     文件名：SnsApi.cs
-    文件功能描述：小程序Sns下接口
+    文件功能描述：小程序 Sns下接口
     
     创建标识：Senparc - 20170105
 ----------------------------------------------------------------*/
@@ -92,7 +92,7 @@ namespace Senparc.Weixin.WxOpen.AdvancedAPIs.Sns
 
             var url = string.Format(urlFormat, appId, secret, jsCode, grantType);
 
-            var result = await CommonJsonSend.SendAsync<JsCode2JsonResult>(null, url, null, CommonJsonSendType.GET);
+            var result = await CommonJsonSend.SendAsync<JsCode2JsonResult>(null, url, null, CommonJsonSendType.GET).ConfigureAwait(false);
             return result;
         }
 
